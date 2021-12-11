@@ -14,8 +14,8 @@ epsilon = list(map(lambda b: 1 if b == 0 else 0, gamma))
 
 def to_dec(it):
     return reduce(
-      lambda ac, bitpos: ac + (2 ** (bitpos[0])) * bitpos[1],
-      enumerate(reversed(it)), 0)
+        lambda ac, bitpos: ac + (2 ** (bitpos[0])) * bitpos[1],
+        enumerate(reversed(it)), 0)
 
 
 print(to_dec(gamma) * to_dec(epsilon))
